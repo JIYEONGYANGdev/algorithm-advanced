@@ -17,7 +17,7 @@
 - The object received must remain in the initial state after the function's call.
 - If you receive an empty object, you must return false
 */
-
+// test case all passed
 function findMatryoshka(matryoshka, size) {
   //base case
   if (!matryoshka) return false; // null
@@ -47,4 +47,16 @@ output = findMatryoshka(matryoshka, 8);
 console.log(output); // --> false
 
 output = findMatryoshka(matryoshka2, 6);
-console.log(output); //
+console.log(output); // false;
+
+/* reference
+function findMatryoshka(matryoshka, size) {
+  if (matryoshka.size === size) {
+    return true;
+  } else if (matryoshka.matryoshka && matryoshka.size > size) {
+    return findMatryoshka(matryoshka.matryoshka, size);
+  }
+
+  return false;
+}
+*/
