@@ -6,6 +6,7 @@ Return null if there are no even-occurrence items.
 
 function evenOccurrence(arr) {
   let count;
+  if (arr.length <= 1) return null;
   for (let i = 0; i < arr.length - 1; i++) {
     count = 1;
     for (let j = i + 1; j < arr.length; j++) {
@@ -33,3 +34,4 @@ console.log(evenOccurrence([1, 3, 3, 3, 2, 4, 4, 2, 5])) // 2
 console.log(evenOccurrence(['cat', 'dog', 'dig', 'cat'])) // 'cat'
 console.log(evenOccurrence(['meow', 2, 1, 'meow'])) // 'meow'
 console.log(evenOccurrence(['doublerainbow', 'grumpycat', 'grumpycat', 'doublerainbow']))// 'doublerainbow'
+console.log(evenOccurrence(['doublerainbow']))// 'doublerainbow'
